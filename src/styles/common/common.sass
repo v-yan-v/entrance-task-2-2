@@ -12,6 +12,11 @@ body
   padding-left: 3%
   padding-right: 2%
 
+.yandexFL
+  display: inline-block
+  &::first-letter
+    color: #ff0000
+
 .Header
   align-items: center
   //background-color: azure
@@ -22,3 +27,21 @@ body
     margin-right: 4%
   &-Navigation
     width: 100%
+
+.Footer
+  align-items: center
+  color: #858585
+  display: flex
+  height: 8vh
+  justify-content: space-between
+  &-Navigation
+    width: 80%
+  &-Copyrights
+    text-align: right
+    // ms edge13 can't t-a:end
+    //text-align: end
+    width: 20%
+  &-CopyrightsLink
+    color: #858585
+    margin-left: 5%
+    text-decoration: none
