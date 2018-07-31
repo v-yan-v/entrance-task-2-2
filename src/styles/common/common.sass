@@ -1,6 +1,7 @@
 $colorTextGrey: #858585
 $colorTextMain: #333333
-$colorDarkenWhite: #F0F0F0
+$colorSectionBorder: #F0F0F0
+$colorCardBackground: #F7F7F7
 html
   color: $colorTextMain
   font-family: Arial-BoldMT, ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif
@@ -24,7 +25,7 @@ body
 .Header
   align-items: center
   //background-color: azure
-  border-bottom: $colorDarkenWhite 1px solid
+  border-bottom: $colorSectionBorder 1px solid
   display: flex
   height: 11vh
   &-LogoBox
@@ -110,11 +111,32 @@ body
     font-weight: normal
     font-size: 1rem
   //&-WeatherTemperature
-  //&-WeatherIco
-  //  background: transparent no-repeat center center
-  //  background-image: url(./assets/cloud-drizzle.svg)
-  //  -webkit-background-size: cover
-  //  background-size: cover
-  //  display: inline-block
-  //  height: 1em
-  //  width: 1em
+  &-WeatherIco
+    background: transparent no-repeat center center
+    background-image: url(./assets/cloud-drizzle.svg)
+    -webkit-background-size: cover
+    background-size: cover
+    display: inline-block
+    height: .8em
+    width: .8em
+
+.Card
+  background-color: $colorCardBackground
+  border-radius: 20px
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100px
+  margin-bottom: 5%
+  padding: 1rem
+  width: 32%
+  min-width: 14rem
+  &-Pictogram
+    //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
+    //height: 1.5rem
+    //width: 100%
+  &-SubTitle
+    color: $colorTextGrey
+    font-size: 0.75em
+    font-weight: normal
+    margin-top: 5px
