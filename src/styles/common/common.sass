@@ -1,7 +1,11 @@
+$colorTextGrey: #858585
+$colorTextMain: #333333
+$colorDarkenWhite: #F0F0F0
 html
-  color: #333333
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+  color: $colorTextMain
+  font-family: Arial-BoldMT, ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif
   font-size: 16px
+  font-weight: bold
   //background-color: antiquewhite
 body
   margin: 0
@@ -20,7 +24,7 @@ body
 .Header
   align-items: center
   //background-color: azure
-  border-bottom: #F0F0F0 1px solid
+  border-bottom: $colorDarkenWhite 1px solid
   display: flex
   height: 11vh
   &-LogoBox
@@ -30,8 +34,9 @@ body
 
 .Footer
   align-items: center
-  color: #858585
+  color: $colorTextGrey
   display: flex
+  font-weight: normal
   height: 8vh
   justify-content: space-between
   &-Navigation
@@ -45,3 +50,71 @@ body
     color: #858585
     margin-left: 5%
     text-decoration: none
+
+.Nav
+  align-items: center
+  display: flex
+  list-style: none
+  margin: 0
+  padding: 0
+  &-Item
+    margin-right: 2.5%
+    opacity: 0.6
+    &--active
+      opacity: 1
+  &-Link
+    color: $colorTextMain
+    text-decoration: none
+
+.Content
+  display: grid
+  grid-gap: 2%
+  grid-template-columns: 1fr 1fr
+  grid-template-rows: max-content
+  height: 52vh
+
+.MainContent
+  height: 52vh
+  padding-top: 3%
+  padding-bottom: 4%
+  &-Title
+    font-size: 1.125rem
+    //height: 15%
+    //margin: 0
+  &-Wrap
+    background: url(./assets/bg@2x.png)  no-repeat center center
+    background-size: cover
+    -webkit-background-size: cover
+    border-radius:  20px
+    display: flex
+    height: 85%
+    justify-content: space-between
+    overflow: hidden
+    padding: 2% 4%
+  &-Summary
+  &-Greeting
+    font-size: 1.6875rem
+    //font-weight: bold
+  &-Brief
+    font-weight: normal
+    &:first-letter
+      text-transform: uppercase
+  &-Weather
+    display: flex
+    font-size: 2.25rem
+    text-align: center
+  &-WeatherInside
+    margin-right: 3.5%
+  &-WeatherTitle
+    color: $colorTextGrey
+    font-weight: normal
+    font-size: 1rem
+  //&-WeatherTemperature
+  //&-WeatherIco
+  //  background: transparent no-repeat center center
+  //  background-image: url(./assets/cloud-drizzle.svg)
+  //  -webkit-background-size: cover
+  //  background-size: cover
+  //  display: inline-block
+  //  height: 1em
+  //  width: 1em
