@@ -25,6 +25,18 @@ body
   &::first-letter
     color: #ff0000
 
+.linkBack
+  display: inline-block
+  background:  url(./assets/Icons/ArrowLeft/MCopy@1x.png) no-repeat center center
+  height: 1em
+  width: 1em
+.linkForward
+  display: inline-block
+  background:  url(./assets/Icons/ArrowLeft/MCopy@1x.png) no-repeat center center
+  height: 1em
+  transform: scale(-1)
+  width: 1em
+
 .Header
   align-items: center
   //background-color: azure
@@ -124,22 +136,32 @@ body
     height: .8em
     width: .8em
   &-Top
-    display: flex
-    flex-direction: column
-    justify-content: space-around
+    //display: flex
+    //flex-direction: column
+    //justify-content: space-around
     //width: 32%
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 1vw
+    //grid-auto-flow: column
 
 .Card
   background-color: $colorCardBackground
   border-radius: 20px
+  box-sizing: border-box
   display: flex
   flex-direction: column
   justify-content: space-between
   min-height: 100px
-  margin-bottom: 5%
+  height: 100px
+  //margin-bottom: 5%
   padding: 1rem
-  //min-width: 14rem
   min-width: 150px
+  //width: 200px
+  &:hover
+    background: #FFFFFF
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+    cursor: pointer
   &-Pictogram
     //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
     //height: 1.5rem
@@ -149,3 +171,22 @@ body
     font-size: 0.75em
     font-weight: normal
     margin-top: 5px
+
+.FavoriteScenarios
+  height: 52vh
+  padding-top: 3%
+  padding-bottom: 4%
+  &-Header
+    display: flex
+    justify-content: space-between
+  &-Title
+    font-size: 1.125rem
+  &-Content
+    display: grid
+    //grid-auto-flow: column
+    grid-gap: 1vw
+    //grid-template-columns: repeat(auto-fit, minmax(1fr, 20vw) )
+    grid-template-columns: 1fr 1fr 1fr
+    //grid-template-rows: 1fr 1fr 1fr
+    overflow: hidden
+    padding: 2% 4%
