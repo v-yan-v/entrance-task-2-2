@@ -9,15 +9,18 @@ html
   font-weight: bold
   //background-color: antiquewhite
 body
-  display: flex
-  flex-direction: column
-  justify-content: space-between
+  //display: flex
+  //flex-direction: column
+  //justify-content: space-between
+  display: grid
+  grid-template-columns: 1fr
+  grid-template-rows: 1fr 5fr 2fr 0.7fr
   margin: 0
   height: 100vh
   padding: 0
 
 .container
-  padding-left: 3%
+  padding-left: 2%
   padding-right: 2%
 
 .yandexFL
@@ -42,7 +45,7 @@ body
   //background-color: azure
   border-bottom: $colorSectionBorder 1px solid
   display: flex
-  height: 11vh
+  //height: 11vh
   &-LogoBox
     margin-right: 4%
   &-Navigation
@@ -53,7 +56,7 @@ body
   color: $colorTextGrey
   display: flex
   font-weight: normal
-  height: 8vh
+  //height: 8vh
   justify-content: space-between
   &-Navigation
     width: 80%
@@ -87,10 +90,10 @@ body
   grid-gap: 2%
   grid-template-columns: 1fr 1fr
   grid-template-rows: max-content
-  height: 52vh
+  //height: 52vh
 
 .MainContent
-  height: 52vh
+  //height: 52vh
   padding-top: 3%
   padding-bottom: 4%
   &-Title
@@ -103,7 +106,7 @@ body
     -webkit-background-size: cover
     border-radius:  20px
     display: flex
-    height: 85%
+    //height: 85%
     justify-content: space-between
     overflow: hidden
     padding: 2% 4%
@@ -143,6 +146,7 @@ body
     display: grid
     grid-template-columns: 1fr
     grid-gap: 1vw
+    max-height: 58vh
     //grid-auto-flow: column
 
 .Card
@@ -153,16 +157,17 @@ body
   flex-direction: column
   justify-content: space-between
   min-height: 100px
-  height: 100px
+  //height: 100px
   //margin-bottom: 5%
-  padding: 1rem
-  min-width: 150px
+  padding: 10px
+  min-width: 175px
   //width: 200px
   &:hover
     background: #FFFFFF
     box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
     cursor: pointer
   &-Pictogram
+    margin-bottom: 10px
     //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
     //height: 1.5rem
     //width: 100%
@@ -173,7 +178,7 @@ body
     margin-top: 5px
 
 .FavoriteScenarios
-  height: 52vh
+  //height: 52vh
   padding-top: 3%
   padding-bottom: 4%
   &-Header
@@ -189,4 +194,25 @@ body
     grid-template-columns: 1fr 1fr 1fr
     //grid-template-rows: 1fr 1fr 1fr
     overflow: hidden
-    padding: 2% 4%
+    padding: 2% 0
+
+
+.FavoriteGadgets
+  //height: 20vh
+  overflow: hidden
+  &-Header
+    display: flex
+    justify-content: space-between
+  &-TitleWrap
+    display: flex
+    flex-direction: row
+    //justify-content: space-around
+    width: 80%
+  &-Tags
+    display: flex
+    justify-content: space-around
+  &-Nav
+    max-width: 10%
+  &-Content
+    display: flex
+    flex-direction: row
