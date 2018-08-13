@@ -2,6 +2,8 @@ $colorTextGrey: #858585
 $colorTextMain: #333333
 $colorSectionBorder: #F0F0F0
 $colorCardBackground: #F7F7F7
+$colorTagActiveBackground: #FFD93E
+
 html
   color: $colorTextMain
   font-family: Arial-BoldMT, ArialMT, Arial, "Helvetica Neue", Helvetica, sans-serif
@@ -94,8 +96,8 @@ body
 
 .MainContent
   //height: 52vh
-  padding-top: 3%
-  padding-bottom: 4%
+  //padding-top: 3%
+  //padding-bottom: 4%
   &-Title
     font-size: 1.125rem
     //height: 15%
@@ -164,7 +166,7 @@ body
   //width: 200px
   &:hover
     background: #FFFFFF
-    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50);
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
     cursor: pointer
   &-Pictogram
     margin-bottom: 10px
@@ -179,8 +181,8 @@ body
 
 .FavoriteScenarios
   //height: 52vh
-  padding-top: 3%
-  padding-bottom: 4%
+  //padding-top: 3%
+  //padding-bottom: 4%
   &-Header
     display: flex
     justify-content: space-between
@@ -194,25 +196,49 @@ body
     grid-template-columns: 1fr 1fr 1fr
     //grid-template-rows: 1fr 1fr 1fr
     overflow: hidden
-    padding: 2% 0
+    padding: 2% 1%
 
 
 .FavoriteGadgets
   //height: 20vh
   overflow: hidden
+  padding-top: 1vh
   &-Header
     display: flex
     justify-content: space-between
+    padding-bottom: 1vh
   &-TitleWrap
     display: flex
     flex-direction: row
     //justify-content: space-around
+    align-items: center
     width: 80%
+  &-Title
+    margin-right: 3rem
+    //min-width: 10%
   &-Tags
-    display: flex
-    justify-content: space-around
+    //display: flex
+    //justify-content: space-around
+    min-width: 50%
+  &-Tag
+    background-color: $colorCardBackground
+    border-radius: 20px
+    display: inline-block
+    line-height: 1.6
+    min-width: 2rem
+    padding: 5px 10px
+    text-align: center
+    &:not(:last-child)
+      margin-right: 1rem
+    &--active
+      background-color: $colorTagActiveBackground
   &-Nav
     max-width: 10%
   &-Content
     display: flex
     flex-direction: row
+  &-Card
+    flex-grow: 1
+    max-width: calc(100vw / 6)
+    &:not(:last-child)
+      margin-right: 1vw
