@@ -1,0 +1,27 @@
+.Card
+  background-color: $colorCardBackground
+  border-radius: 20px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  min-height: 100px
+  //height: 100px
+  //margin-bottom: 5%
+  padding: 10px
+  min-width: 175px
+  //width: 200px
+  &:hover
+    background: $colorCardHoveredBackground
+    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
+    cursor: pointer
+  &-Pictogram
+    margin-bottom: 10px
+  //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
+  //height: 1.5rem
+  //width: 100%
+  &-SubTitle
+    color: $colorTextGrey
+    font-size: 0.75em
+    font-weight: normal
+    margin-top: 5px

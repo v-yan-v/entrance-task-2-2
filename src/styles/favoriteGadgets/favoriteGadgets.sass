@@ -1,0 +1,45 @@
+.FavoriteGadgets
+  //height: 20vh
+  padding-top: 1vh
+  &-Header
+    display: flex
+    justify-content: space-between
+    padding-bottom: 1vh
+  &-TitleWrap
+    display: flex
+    flex-direction: row
+    //justify-content: space-around
+    align-items: center
+    width: 80%
+  &-Title
+    margin-right: 3rem
+  //min-width: 10%
+  &-Tags
+    //display: flex
+    //justify-content: space-around
+    min-width: 50%
+  &-Tag
+    background-color: $colorCardBackground
+    border-radius: 20px
+    display: inline-block
+    line-height: 1.6
+    min-width: 2rem
+    padding: 5px 10px
+    text-align: center
+    &:not(:last-child)
+      margin-right: 1rem
+    &--active
+      background-color: $colorTagActiveBackground
+  &-Nav
+    max-width: 10%
+  &-Content
+    display: flex
+    flex-direction: row
+    padding-bottom: 1vh
+    overflow: hidden
+    max-width: 100vw
+  &-Card
+    flex-grow: 1
+    max-width: calc(100vw / 6)
+    &:not(:last-child)
+      margin-right: 1vw

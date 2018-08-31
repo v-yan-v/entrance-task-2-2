@@ -1,0 +1,56 @@
+.MainContent
+  //height: 52vh
+  //padding-top: 3%
+  //padding-bottom: 4%
+  &-Title
+    font-size: 1.125rem
+  //height: 15%
+  //margin: 0
+  &-Wrap
+    background: url(../img/bg_2x.png)  no-repeat center center
+    background-size: cover
+    -webkit-background-size: cover
+    border-radius:  20px
+    display: flex
+    //height: 85%
+    justify-content: space-between
+    overflow: hidden
+    padding: 2% 4%
+  &-Summary
+  //width: 68%
+  &-Greeting
+    font-size: 1.6875rem
+  //font-weight: bold
+  &-Brief
+    font-weight: normal
+    &:first-letter
+      text-transform: uppercase
+  &-Weather
+    display: flex
+    font-size: 2.25rem
+    text-align: center
+  &-WeatherInside
+    margin-right: 3.5%
+  &-WeatherTitle
+    color: $colorTextGrey
+    font-weight: normal
+    font-size: 1rem
+  //&-WeatherTemperature
+  &-WeatherIco
+    background: transparent no-repeat center center
+    background-image: url(../img/icons/cloud-drizzle.svg)
+    -webkit-background-size: cover
+    background-size: cover
+    display: inline-block
+    height: .8em
+    width: .8em
+  &-Top
+    //display: flex
+    //flex-direction: column
+    //justify-content: space-around
+    //width: 32%
+    display: grid
+    grid-template-columns: 1fr
+    grid-gap: 1vw
+    max-height: 55vh
+    //grid-auto-flow: column

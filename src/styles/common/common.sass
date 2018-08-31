@@ -2,6 +2,7 @@ $colorTextGrey: #858585
 $colorTextMain: #333333
 $colorSectionBorder: #F0F0F0
 $colorCardBackground: #F7F7F7
+$colorCardHoveredBackground: #FFFFFF
 $colorTagActiveBackground: #FFD93E
 
 html
@@ -24,6 +25,8 @@ body
 .container
   padding-left: 2%
   padding-right: 2%
+  //max-width: 96vw
+  //margin: 0 auto
 
 .yandexFL
   display: inline-block
@@ -32,45 +35,15 @@ body
 
 .linkBack
   display: inline-block
-  background:  url(./assets/Icons/ArrowLeft/MCopy@1x.png) no-repeat center center
+  background:  url(../img/icons/arrow_1x.png) no-repeat center center
   height: 1em
   width: 1em
 .linkForward
   display: inline-block
-  background:  url(./assets/Icons/ArrowLeft/MCopy@1x.png) no-repeat center center
+  background:  url(../img/icons/arrow_1x.png) no-repeat center center
   height: 1em
   transform: scale(-1)
   width: 1em
-
-.Header
-  align-items: center
-  //background-color: azure
-  border-bottom: $colorSectionBorder 1px solid
-  display: flex
-  //height: 11vh
-  &-LogoBox
-    margin-right: 4%
-  &-Navigation
-    width: 100%
-
-.Footer
-  align-items: center
-  color: $colorTextGrey
-  display: flex
-  font-weight: normal
-  //height: 8vh
-  justify-content: space-between
-  &-Navigation
-    width: 80%
-  &-Copyrights
-    text-align: right
-    // ms edge13 can't t-a:end
-    //text-align: end
-    width: 20%
-  &-CopyrightsLink
-    color: #858585
-    margin-left: 5%
-    text-decoration: none
 
 .Nav
   align-items: center
@@ -87,158 +60,39 @@ body
     color: $colorTextMain
     text-decoration: none
 
+.Header
+  align-items: center
+  //background-color: azure
+  border-bottom: $colorSectionBorder 1px solid
+  display: flex
+  //height: 11vh
+  &-LogoBox
+    margin-right: 4%
+  &-Navigation
+    width: 100%
+
 .Content
   display: grid
   grid-gap: 2%
   grid-template-columns: 1fr 1fr
   grid-template-rows: max-content
-  //height: 52vh
+//height: 52vh
 
-.MainContent
-  //height: 52vh
-  //padding-top: 3%
-  //padding-bottom: 4%
-  &-Title
-    font-size: 1.125rem
-    //height: 15%
-    //margin: 0
-  &-Wrap
-    background: url(./assets/bg@2x.png)  no-repeat center center
-    background-size: cover
-    -webkit-background-size: cover
-    border-radius:  20px
-    display: flex
-    //height: 85%
-    justify-content: space-between
-    overflow: hidden
-    padding: 2% 4%
-  &-Summary
-    //width: 68%
-  &-Greeting
-    font-size: 1.6875rem
-    //font-weight: bold
-  &-Brief
-    font-weight: normal
-    &:first-letter
-      text-transform: uppercase
-  &-Weather
-    display: flex
-    font-size: 2.25rem
-    text-align: center
-  &-WeatherInside
-    margin-right: 3.5%
-  &-WeatherTitle
-    color: $colorTextGrey
-    font-weight: normal
-    font-size: 1rem
-  //&-WeatherTemperature
-  &-WeatherIco
-    background: transparent no-repeat center center
-    background-image: url(./assets/cloud-drizzle.svg)
-    -webkit-background-size: cover
-    background-size: cover
-    display: inline-block
-    height: .8em
-    width: .8em
-  &-Top
-    //display: flex
-    //flex-direction: column
-    //justify-content: space-around
-    //width: 32%
-    display: grid
-    grid-template-columns: 1fr
-    grid-gap: 1vw
-    max-height: 58vh
-    //grid-auto-flow: column
-
-.Card
-  background-color: $colorCardBackground
-  border-radius: 20px
-  box-sizing: border-box
+.Footer
+  align-items: center
+  color: $colorTextGrey
   display: flex
-  flex-direction: column
+  font-weight: normal
+  //height: 8vh
   justify-content: space-between
-  min-height: 100px
-  //height: 100px
-  //margin-bottom: 5%
-  padding: 10px
-  min-width: 175px
-  //width: 200px
-  &:hover
-    background: #FFFFFF
-    box-shadow: 0 2px 6px 0 rgba(197,186,186,0.50)
-    cursor: pointer
-  &-Pictogram
-    margin-bottom: 10px
-    //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
-    //height: 1.5rem
-    //width: 100%
-  &-SubTitle
+  &-Navigation
+    width: 60%
+  &-Copyrights
+    text-align: right
+    // ms edge13 can't t-a:end
+    //text-align: end
+    width: 35%
+  &-CopyrightsLink
     color: $colorTextGrey
-    font-size: 0.75em
-    font-weight: normal
-    margin-top: 5px
-
-.FavoriteScenarios
-  //height: 52vh
-  //padding-top: 3%
-  //padding-bottom: 4%
-  &-Header
-    display: flex
-    justify-content: space-between
-  &-Title
-    font-size: 1.125rem
-  &-Content
-    display: grid
-    //grid-auto-flow: column
-    grid-gap: 1vw
-    //grid-template-columns: repeat(auto-fit, minmax(1fr, 20vw) )
-    grid-template-columns: 1fr 1fr 1fr
-    //grid-template-rows: 1fr 1fr 1fr
-    overflow: hidden
-    padding: 2% 1%
-
-
-.FavoriteGadgets
-  //height: 20vh
-  overflow: hidden
-  padding-top: 1vh
-  &-Header
-    display: flex
-    justify-content: space-between
-    padding-bottom: 1vh
-  &-TitleWrap
-    display: flex
-    flex-direction: row
-    //justify-content: space-around
-    align-items: center
-    width: 80%
-  &-Title
-    margin-right: 3rem
-    //min-width: 10%
-  &-Tags
-    //display: flex
-    //justify-content: space-around
-    min-width: 50%
-  &-Tag
-    background-color: $colorCardBackground
-    border-radius: 20px
-    display: inline-block
-    line-height: 1.6
-    min-width: 2rem
-    padding: 5px 10px
-    text-align: center
-    &:not(:last-child)
-      margin-right: 1rem
-    &--active
-      background-color: $colorTagActiveBackground
-  &-Nav
-    max-width: 10%
-  &-Content
-    display: flex
-    flex-direction: row
-  &-Card
-    flex-grow: 1
-    max-width: calc(100vw / 6)
-    &:not(:last-child)
-      margin-right: 1vw
+    margin-left: 5%
+    text-decoration: none
