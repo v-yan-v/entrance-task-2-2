@@ -11,6 +11,8 @@ html
   font-size: 16px
   font-weight: bold
   //background-color: antiquewhite
+  @media screen and (max-width: 1000px)
+    font-size: 12px
 body
   //display: flex
   //flex-direction: column
@@ -21,6 +23,9 @@ body
   margin: 0
   height: 100vh
   padding: 0
+  @media screen and (max-width: 1000px)
+    height: auto
+    max-width: 100vw
 
 .container
   padding-left: 2%
@@ -65,11 +70,34 @@ body
   //background-color: azure
   border-bottom: $colorSectionBorder 1px solid
   display: flex
+  justify-content: space-between
   //height: 11vh
   &-LogoBox
     margin-right: 4%
   &-Navigation
     width: 100%
+    @media screen and (max-width: 1000px)
+      //justify-self: self-end
+      width: 25px
+      & .Nav
+        display: none
+  &-Hamburger
+    display: none
+    @media screen and (max-width: 1000px)
+      display: block
+      position: relative
+      &, &::before, &::after
+        background-color: $colorTextGrey
+        content: ''
+        display: inline-block
+        height: 2px
+        position: absolute
+        width: 25px
+      &::before
+        top: -10px
+      &::after
+        bottom: -10px
+
 
 .Content
   display: grid
