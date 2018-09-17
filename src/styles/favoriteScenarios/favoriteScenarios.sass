@@ -16,3 +16,9 @@
     //grid-template-rows: 1fr 1fr 1fr
     overflow: hidden
     padding: 2% 1%
+  @media screen and (max-width: 1000px)
+    overflow: hidden
+    &-Content
+      grid-auto-flow: column
+    &-Nav
+      display: none

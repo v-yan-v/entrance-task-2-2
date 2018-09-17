@@ -1,15 +1,16 @@
 .FavoriteGadgets
   //height: 20vh
+  overflow: hidden
   padding-top: 1vh
   &-Header
     display: flex
     justify-content: space-between
     padding-bottom: 1vh
   &-TitleWrap
+    align-items: center
     display: flex
     flex-direction: row
     //justify-content: space-around
-    align-items: center
     width: 80%
   &-Title
     margin-right: 3rem
@@ -33,13 +34,26 @@
   &-Nav
     max-width: 10%
   &-Content
-    display: flex
-    flex-direction: row
-    padding-bottom: 1vh
+    display: grid
+    grid-auto-flow: column
+    grid-gap: 1vw
     overflow: hidden
-    max-width: 100vw
-  &-Card
-    flex-grow: 1
-    max-width: calc(100vw / 6)
-    &:not(:last-child)
-      margin-right: 1vw
+  @media screen and (max-width: 1000px)
+    &-TitleWrap
+      justify-content: space-between
+      width: 100%
+    &-Tags
+      min-width: initial
+      width: auto
+    &-Tag:not(&-Tag--active)
+      display: none
+    &-Tag--active:after
+      content: ''
+      background: url(../img/icons/arrow_1x.png) no-repeat center center
+      display: inline-block
+      height: 20px
+      transform: rotate(-90deg)
+      vertical-align: middle
+      width: 20px
+    &-Nav
+      display: none

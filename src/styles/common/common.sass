@@ -24,6 +24,8 @@ body
   height: 100vh
   padding: 0
   @media screen and (max-width: 1000px)
+    grid-gap: 2vmin
+    grid-template-rows: repeat(4, auto)
     height: auto
     max-width: 100vw
 
@@ -42,17 +44,18 @@ body
   display: inline-block
   background:  url(../img/icons/arrow_1x.png) no-repeat center center
   height: 1em
-  width: 1em
+  width: 1.5em
 .linkForward
   display: inline-block
   background:  url(../img/icons/arrow_1x.png) no-repeat center center
   height: 1em
   transform: scale(-1)
-  width: 1em
+  width: 1.5em
 
 .Nav
   align-items: center
   display: flex
+  //flex-wrap: wrap
   list-style: none
   margin: 0
   padding: 0
@@ -64,6 +67,9 @@ body
   &-Link
     color: $colorTextMain
     text-decoration: none
+  @media screen and (max-width: 650px)
+    align-content: center
+    justify-content: center
 
 .Header
   align-items: center
@@ -104,7 +110,8 @@ body
   grid-gap: 2%
   grid-template-columns: 1fr 1fr
   grid-template-rows: max-content
-//height: 52vh
+  @media screen and (max-width: 1000px)
+    grid-template-columns: 1fr
 
 .Footer
   align-items: center
@@ -124,3 +131,13 @@ body
     color: $colorTextGrey
     margin-left: 5%
     text-decoration: none
+  @media screen and (max-width: 650px)
+    flex-direction: column
+    margin-top: 3vw
+    margin-bottom: 3vw
+    &-Copyrights
+      text-align: center
+      width: 90%
+    &-Navigation
+      margin-bottom: 3vw
+      width: 90%
