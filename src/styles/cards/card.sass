@@ -25,8 +25,126 @@
   //background: transparent url(./assets/icon_temperature.svg) no-repeat left bottom
   //height: 1.5rem
   //width: 100%
-  &-SubTitle
+  &-Status
     color: $colorTextGrey
     font-size: 0.75em
     font-weight: normal
     margin-top: 5px
+
+.Card--fullScreen
+  background-color: rgba(51, 51, 51, 0.5)
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  left: 0
+  position: absolute
+  right: 0
+  top: 0
+.gadgetWrap
+  max-width: 55%
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    max-width: 90%
+.gadget
+  background: $colorCardFullScreenBackground
+  border-radius: 20px
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  padding: 3vh
+.gadget-Header
+  display: flex
+  font-size: 1.6875rem
+  font-weight: bold
+  justify-content: space-between
+  margin-bottom: 2vh
+  width: 100%
+.gadget-Title
+.gadget-Status
+  font-size: 1rem
+  font-weight: normal
+.gadget-InfoText
+  font-size: 2.25rem
+.gadget-Icon
+  display: inline-block
+.gadget-Presets
+  display: flex
+  margin-bottom: 2vh
+  width: 100%
+.gadget-Variants
+  background: $colorVariantBackground
+  border-radius: 20px
+  cursor: pointer
+  padding: 0.4rem 0.8rem
+  &.active
+    background: $colorVariantActiveBackground
+  &:not(:last-child)
+    margin-right: 1vh
+.gadget-SliderBox
+  background: linear-gradient( to right, $colorAirTemperatureGradient1, $colorAirTemperatureGradient2, $colorAirTemperatureGradient3)
+  border-radius: 30px
+  box-sizing: border-box
+  display: inline-block
+  height: 60px
+  overflow: hidden
+  padding: 0 3.5%
+  position: relative
+  vertical-align: middle
+  width: 100%
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    background: linear-gradient( to bottom, $colorAirTemperatureGradient3, $colorAirTemperatureGradient2, $colorAirTemperatureGradient1)
+    max-height: 75vh
+    min-height: 45vh
+    padding: 3.5% 0
+    width: 65px
+.gadget-Limits
+  display: flex
+  color: $colorGadgetLimits
+  font-size: 1.125rem
+  justify-content: space-between
+  position: relative
+  text-align: center
+  top: 50%
+  transform: translateY(-50%)
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    box-sizing: border-box
+    flex-direction: column-reverse
+    font-size: 2.2rem
+    height: 100%
+    line-height: 1
+    position: static
+    transform: none
+.gadget-Slider
+  border: 3px solid rgba(51,51,51,0.10)
+  box-shadow: 0 0 0 3px #FFFFFF
+  border-radius: 50%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  cursor: pointer
+  height: 65px
+  position: absolute
+  top: -2px
+  width: 65px
+.gadget-ConfirmForm
+  margin-top: 2.5vh
+  display: flex
+  justify-content: space-between
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    flex-wrap: wrap
+    margin-top: 1.5vh
+.gadget-FormButtons
+  background: $colorCardFullScreenBackground
+  border: none
+  border-radius: 20px
+  cursor: pointer
+  font-size: 1.125rem
+  font-weight: bold
+  height: 60px
+  justify-content: space-between
+  width: 45%
+  &.active
+    background-color: $colorGadgetFormButtonsActiveBackground
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    margin-bottom: 1.5vh
+    width: 100%
