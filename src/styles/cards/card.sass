@@ -83,7 +83,6 @@
   &:not(:last-child)
     margin-right: 1vh
 .gadget-SliderBox
-  background: linear-gradient( to right, $colorAirTemperatureGradient1, $colorAirTemperatureGradient2, $colorAirTemperatureGradient3)
   border-radius: 30px
   box-sizing: border-box
   display: flex
@@ -94,7 +93,6 @@
   vertical-align: middle
   width: 100%
   @media screen and (max-width: 800px) and (orientation: portrait)
-    background: linear-gradient( to bottom, $colorAirTemperatureGradient3, $colorAirTemperatureGradient2, $colorAirTemperatureGradient1)
     max-height: 75vh
     min-height: 45vh
     padding: 3.5% 0
@@ -127,6 +125,28 @@
   position: absolute
   top: -2px
   width: 65px
+
+// Gadget Lights
+.gadget-SliderBox--temperature
+  background: linear-gradient( to right, $colorGadgetAirTemperatureSliderGradient1, $colorGadgetAirTemperatureSliderGradient2, $colorGadgetAirTemperatureSliderGradient3)
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    background: linear-gradient( to bottom, $colorGadgetAirTemperatureSliderGradient3, $colorGadgetAirTemperatureSliderGradient2, $colorGadgetAirTemperatureSliderGradient1)
+.gadget-SliderBox--lightControl
+  background-image: linear-gradient(to right, $colorGadgetLightSliderGradient1 2%, $colorGadgetLightSliderGradient2 98%)
+  @media screen and (max-width: 800px) and (orientation: portrait)
+    background: linear-gradient( to bottom, $colorGadgetLightSliderGradient2 2%, $colorGadgetLightSliderGradient1 98%)
+  & .gadget-LimitMin
+    background: url("../img/icons/icon_sun_min.svg") no-repeat center center
+    background-size: cover
+    display: inline-block
+    min-height: 3.5vmax
+    min-width: 3.5vmax
+  & .gadget-LimitMax
+    background: url("../img/icons/icon_sun_max.svg") no-repeat center center
+    background-size: cover
+    display: inline-block
+    min-height: 3.5vmax
+    min-width: 3.5vmax
 
 // Gadget FloorTemperature
 .gadget-CircleControlBox
