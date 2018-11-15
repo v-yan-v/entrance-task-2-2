@@ -67,6 +67,8 @@
   font-size: 2.25rem
 .gadget-Icon
   display: inline-block
+
+// Gadget AirTemperature
 .gadget-Presets
   display: flex
   margin-bottom: 2vh
@@ -126,6 +128,54 @@
   position: absolute
   top: -2px
   width: 65px
+
+// Gadget FloorTemperature
+.gadget-CircleControlBox
+  align-items: center
+  display: flex
+  height: 30vh
+  justify-content: center
+  position: relative
+  width: 30vh
+.gadget-Circle
+  align-items: center
+  border-radius: 50%
+  background: #FEFEFE
+  box-shadow: 0 2px 4px 0 rgba(134,121,71,0.45)
+  display: flex
+  height: 20vh
+  justify-content: center
+  position: relative
+  width: 20vh
+.gadget-NewValue
+  font-size: 8vh
+.gadget-Ray
+  position: absolute
+  transform-origin: right center
+  width: 10vh
+  @for $i from 0 through 90
+    &.deg#{$i*3-45}
+      transform: translateX(-50%) rotate($i*3-45deg)
+  &::before
+    background-color: $colorGadgetCircleControlRayActive
+    content: ''
+    height: 2px
+    left: -2.5vh
+    position: absolute
+    width: 2.5vh
+  &.active ~ &::before
+    background-color: $colorGadgetCircleControlRay
+  &.active::after
+    border: 1vh solid transparent
+    border-right: 1vh solid #333333
+    content: ''
+    left: -0.7vh
+    position: absolute
+    top: -0.85vh
+    z-index: 5
+
+
+// Gadget Confirm Buttons
 .gadget-ConfirmForm
   margin-top: 2.5vh
   display: flex
@@ -142,7 +192,7 @@
   font-weight: bold
   height: 60px
   justify-content: space-between
-  width: 45%
+  width: 49%
   &.active
     background-color: $colorGadgetFormButtonsActiveBackground
   @media screen and (max-width: 800px) and (orientation: portrait)
