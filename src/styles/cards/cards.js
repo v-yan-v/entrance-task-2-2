@@ -1,4 +1,4 @@
-//  todo: add html data tag with card-gadget type info
+//  todo:
 //  todo: js variables and get data for air temperature cards
 //  todo: js variables and get data for light control cards
 //  todo: js variables and get data for floor temperature cards
