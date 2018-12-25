@@ -40,7 +40,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin"); // для ра
 module.exports = {
   mode: 'development',
   entry: [
-    './src/index.js',
+    './src/main.js',
   ],
   output: {
     filename: './js/bundle.js',

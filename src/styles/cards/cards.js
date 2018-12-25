@@ -6,7 +6,8 @@
 //  todo: actions on events from compact cards (open full-screen)
 //  todo: wheel scroll change slider value
 
-const cardAirTemperature = `<div class="Card--fullScreen">
+const cardAirTemperature = `
+<!--<div class="Card&#45;&#45;fullScreen">-->
   <div class="gadgetWrap">
     <div class="gadget">
       <div class="gadget-Header">
@@ -38,17 +39,18 @@ const cardAirTemperature = `<div class="Card--fullScreen">
     </div>
     <div class="gadget-ConfirmForm">
       <button class="gadget-FormButtons active">apply</button>
-      <button class="gadget-FormButtons ">close</button>
+      <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
-</div>`;
+<!--</div>-->
+`;
 
 let raysDiv = '';
 for (let i=-45; i<=225; i+=3){
   raysDiv += `<div class="gadget-Ray deg${i.toString()}"></div>`;
 }
 const cardFloorTemperature = `
-<div class="Card--fullScreen">
+<!--<div class="Card&#45;&#45;fullScreen">-->
   <div class="gadgetWrap">
     <div class="gadget">
       <div class="gadget-Header">
@@ -77,14 +79,14 @@ const cardFloorTemperature = `
     </div>
     <div class="gadget-ConfirmForm">
       <button class="gadget-FormButtons active">apply</button>
-      <button class="gadget-FormButtons ">close</button>
+      <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
-</div>
+<!--</div>-->
 `;
 
 const cardLightControl = `
-<div class="Card--fullScreen">
+<!--<div class="Card&#45;&#45;fullScreen">-->
   <div class="gadgetWrap">
     <div class="gadget">
       <div class="gadget-Header">
@@ -116,9 +118,43 @@ const cardLightControl = `
     </div>
     <div class="gadget-ConfirmForm">
       <button class="gadget-FormButtons active">apply</button>
-      <button class="gadget-FormButtons ">close</button>
+      <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
-</div>`;
+<!--</div>-->
+`;
+
 function onCardClick(event) {
+  // create modal
+  let modal = document.createElement('DIV');
+  modal.classList.add('Card--fullScreen');
+  
+  // fill modal by type
+  document.body.appendChild(modal);
+  if (event.target.closest('.Card').getAttribute('data-cardType') === 'airTemperature'){
+    modal.innerHTML = cardAirTemperature;
+  }
+  if (event.target.closest('.Card').getAttribute('data-cardType') === 'floorTemperature'){
+    modal.innerHTML = cardFloorTemperature;
+  }
+  if (event.target.closest('.Card').getAttribute('data-cardType') === 'light'){
+    modal.innerHTML = cardLightControl;
+  }
+  
+  // close modal
+  modal.addEventListener('click', e=>{
+    if (e.target === modal || e.target.classList.contains('closeBtn')) {
+      modal.remove();
+    }
+  });
+  
+}
+
+export function cards() {
+  document.body.addEventListener('click', e=>{
+    if (e.target.closest('.Card')){
+      console.log(e.target);
+      onCardClick(e);
+    }
+  });
 }

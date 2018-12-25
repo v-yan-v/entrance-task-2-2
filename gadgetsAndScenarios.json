@@ -1,0 +1,103 @@
+{
+  "favoriteScenarios": [
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "",
+      "scenarioStatus": "active",
+      "scenarioTitle": "Выключить весь свет в доме и во дворе."
+    },
+    {
+      "cardStatus": "notActive",
+      "cardType": "time",
+      "gadgetStatus": "",
+      "scenarioStatus": "notActive",
+      "scenarioTitle": "Я ухожу."
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "",
+      "scenarioStatus": "active",
+      "scenarioTitle": "Включить свет в коридоре"
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "temperature",
+      "gadgetStatus": "Начнётся в 18:00",
+      "scenarioStatus": "active",
+      "scenarioTitle": "Набрать горячую ванну."
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "temperature",
+      "gadgetStatus": "",
+      "scenarioStatus": "active",
+      "scenarioTitle": "Сделать пол тёплым во всей квартире."
+    }
+  ],
+  "favoriteGadgets": [
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "Включено",
+      "gadgetTitle": "Xiaomi Yeelight LED Smart Bulb"
+    },
+    {
+      "cardStatus": "notActive",
+      "cardType": "light",
+      "gadgetStatus": "Включится в 17:00",
+      "gadgetTitle": "D-Link Omna 180 Cam"
+    },
+    {
+      "cardStatus": "notActive",
+      "cardType": "temperature",
+      "gadgetStatus": "Выключено до 17:00",
+      "gadgetTitle": "Elgato Eve Degree Connected"
+    },
+    {
+      "cardStatus": "notActive",
+      "cardType": "light",
+      "gadgetStatus": "Включится в 17:00",
+      "gadgetTitle": "LIFX Mini Day & Dusk A60 E27"
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "Включено",
+      "gadgetTitle": "Xiaomi Mi Air Purifier 2S"
+    },
+    {
+      "cardStatus": "notActive",
+      "cardType": "light",
+      "gadgetStatus": "Выключено",
+      "gadgetTitle": "Philips Zhirui"
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "Включено",
+      "gadgetTitle": "Xiaomi Mi Air Purifier 2S small bedroom"
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "Включено",
+      "gadgetTitle": "Xiaomi Mi Air Purifier 2S 3-rd room"
+    }
+  ],
+  "gadgets": [
+    {
+      "cardStatus": "notActive",
+      "cardType": "temperature",
+      "gadgetStatus": "Начнет охлаждать в 16:30",
+      "gadgetTitle": "Philips Cooler"
+    },
+    {
+      "cardStatus": "active",
+      "cardType": "light",
+      "gadgetStatus": "Включено",
+      "gadgetTitle": "Xiaomi Mi Air Purifier 2S 3-rd room"
+    }
+  ]
+}
