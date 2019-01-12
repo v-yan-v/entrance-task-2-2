@@ -38,7 +38,7 @@ const cardAirTemperature = `
 
     </div>
     <div class="gadget-ConfirmForm">
-      <button class="gadget-FormButtons active">apply</button>
+      <button class="gadget-FormButtons applyBtn active">apply</button>
       <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
@@ -78,7 +78,7 @@ const cardFloorTemperature = `
 
     </div>
     <div class="gadget-ConfirmForm">
-      <button class="gadget-FormButtons active">apply</button>
+      <button class="gadget-FormButtons applyBtn active">apply</button>
       <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
@@ -117,28 +117,36 @@ const cardLightControl = `
 
     </div>
     <div class="gadget-ConfirmForm">
-      <button class="gadget-FormButtons active">apply</button>
+      <button class="gadget-FormButtons applyBtn active">apply</button>
       <button class="gadget-FormButtons closeBtn">close</button>
     </div>
   </div>
 <!--</div>-->
 `;
 
+import {sliderControl} from './cardSlider';
+import {circleControl} from './cardCircleControl';
+
 function onCardClick(event) {
   // create modal
   let modal = document.createElement('DIV');
   modal.classList.add('Card--fullScreen');
   
-  // fill modal by type
   document.body.appendChild(modal);
-  if (event.target.closest('.Card').getAttribute('data-cardType') === 'airTemperature'){
+  
+  // fill modal by type
+  let cardType = event.target.closest('.Card').getAttribute('data-cardType');
+  if (cardType === 'airTemperature'){
     modal.innerHTML = cardAirTemperature;
+    sliderControl(modal.getElementsByClassName('gadget-SliderBox')[0]);
   }
-  if (event.target.closest('.Card').getAttribute('data-cardType') === 'floorTemperature'){
+  if (cardType === 'floorTemperature'){
     modal.innerHTML = cardFloorTemperature;
+    circleControl(modal.getElementsByClassName('gadget-CircleControlBox')[0]);
   }
-  if (event.target.closest('.Card').getAttribute('data-cardType') === 'light'){
+  if (cardType === 'light'){
     modal.innerHTML = cardLightControl;
+    sliderControl(modal.getElementsByClassName('gadget-SliderBox')[0]);
   }
   
   // close modal
@@ -153,7 +161,7 @@ function onCardClick(event) {
 export function cards() {
   document.body.addEventListener('click', e=>{
     if (e.target.closest('.Card')){
-      console.log(e.target);
+      // console.log(e.target);
       onCardClick(e);
     }
   });
