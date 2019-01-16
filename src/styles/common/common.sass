@@ -16,6 +16,7 @@ $colorGadgetCircleControlRay: #858585
 $colorGadgetCircleControlRayActive: #FFD93E
 $colorGadgetLightSliderGradient1: #FFE682
 $colorGadgetLightSliderGradient2: #FF9E00
+$colorMobileMenu: #FFFFFF
 
 html
   color: $colorTextMain
@@ -25,6 +26,7 @@ html
   //background-color: antiquewhite
   @media screen and (max-width: 1000px)
     font-size: 12px
+
 body
   //display: flex
   //flex-direction: column
@@ -57,6 +59,7 @@ body
   background:  url(../img/icons/arrow_1x.png) no-repeat center center
   height: 1em
   width: 1.5em
+
 .linkForward
   display: inline-block
   background:  url(../img/icons/arrow_1x.png) no-repeat center center
@@ -95,10 +98,36 @@ body
   &-Navigation
     width: 100%
     @media screen and (max-width: 1000px)
+      //background: $colorCardHoveredBackground
+      cursor: pointer
       //justify-self: self-end
+      height: 25px
+      position: fixed
+      right: 2vw
       width: 25px
       & .Nav
         display: none
+      &--fullscreen
+        align-items: center
+        background: rgba(0,0,0,0.5)
+        bottom: 0
+        cursor: initial
+        display: flex
+        justify-content: center
+        height: 100vh
+        left: 0
+        position: fixed
+        right: 0
+        top: 0
+        width: 100vw
+        & .Nav
+          color: $colorMobileMenu
+          display: initial
+          font-size: 3rem
+          &-Link
+            color: $colorMobileMenu
+        & .Header-Hamburger
+          display: none
   &-Hamburger
     display: none
     @media screen and (max-width: 1000px)
@@ -109,13 +138,13 @@ body
         content: ''
         display: inline-block
         height: 2px
-        position: absolute
         width: 25px
+      &::before, &::after
+        position: absolute
       &::before
         top: -10px
       &::after
         bottom: -10px
-
 
 .Content
   display: grid

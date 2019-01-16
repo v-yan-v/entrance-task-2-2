@@ -56,7 +56,7 @@ module.exports = {
     overlay: true, // показывать ошибки в браузере
     open: true, // открывать страницу в браузере при запуске сервера
     host: '0.0.0.0', // If you want your server to be accessible externally, specify it like this
-    https: true
+    // https: true
   },
   
   watch: true,
