@@ -26,7 +26,6 @@ export function sliderControl(sliderBox) {
   });
   
   slider.addEventListener('touchstart', apd);
-  slider.addEventListener('mousedown', apd);
   slider.addEventListener('pointerdown', apd);
   slider.ondragstart = ()=>{ return false; };
   
@@ -51,6 +50,10 @@ export function sliderControl(sliderBox) {
     parentCoords = getCoords(sliderBox); // renew coords for case the view had change
     sliderCoords = getCoords(slider); // renew coords for case the view had change
     
+    if (event.type === 'touchstart'){
+      event = event.touches[0];
+    }
+    
     shift = { // distances from pointer event to slider edges
       left: event.pageX - sliderCoords.left,
       top: event.pageY - sliderCoords.top,
@@ -59,11 +62,9 @@ export function sliderControl(sliderBox) {
     };
   
     modal.addEventListener('touchmove', moveAt);
-    modal.addEventListener('mousemove', moveAt);
     modal.addEventListener('pointermove', moveAt);
   
     modal.addEventListener('touchend', rpm);
-    modal.addEventListener('mouseup', rpm);
     modal.addEventListener('pointerup', rpm);
     modal.addEventListener('touchcancel', rpm);
     
@@ -73,7 +74,11 @@ export function sliderControl(sliderBox) {
   
   function moveAt(e) {
     // move slider at position under pointer
-  
+    
+    if (e.type === 'touchstart' || e.type === 'touchmove'){
+      e = e.touches[0];
+    }
+    
     let
       newIndent = { // distance from sliderBox to slider
         left: e.pageX - parentCoords.left - shift.left,
@@ -125,15 +130,12 @@ export function sliderControl(sliderBox) {
     
     // slider.removeEventListener('pointerdown', apd);
     // slider.removeEventListener('touchstart', apd);
-    // slider.removeEventListener('mousedown', apd);
   
     modal.removeEventListener('touchmove', moveAt);
-    modal.removeEventListener('mousemove', moveAt);
     modal.removeEventListener('pointermove', moveAt);
   
     modal.removeEventListener('touchend', rpm);
     modal.removeEventListener('touchecancel', rpm);
-    modal.removeEventListener('mouseup', rpm);
     modal.removeEventListener('pointerup', rpm);
   }
 }
