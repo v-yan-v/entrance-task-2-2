@@ -134,6 +134,10 @@ function onCardClick(event) {
   
   document.body.appendChild(modal);
   
+  document.body.style.overflow = 'hidden';
+  
+  document.onscroll = ()=>{ return false; };
+  
   // fill modal by type
   let cardType = event.target.closest('.Card').getAttribute('data-cardType');
   if (cardType === 'airTemperature'){
@@ -153,6 +157,8 @@ function onCardClick(event) {
   modal.addEventListener('click', e=>{
     if (e.target === modal || e.target.classList.contains('closeBtn')) {
       modal.remove();
+      document.onscroll = null;
+      document.body.style.overflow = '';
     }
   });
   
