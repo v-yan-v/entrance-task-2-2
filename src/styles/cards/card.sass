@@ -42,6 +42,10 @@
   position: fixed
   right: 0
   top: 0
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
   z-index: 30
 .gadgetWrap
   max-width: 55%
@@ -154,10 +158,10 @@
 .gadget-CircleControlBox
   align-items: center
   display: flex
-  height: 30vh
+  height: 35vh
   justify-content: center
   position: relative
-  width: 30vh
+  width: 35vh
 .gadget-Circle
   align-items: center
   border-radius: 50%
@@ -181,9 +185,9 @@
     background-color: $colorGadgetCircleControlRayActive
     content: ''
     height: 2px
-    left: -2.5vh
+    left: -4vh
     position: absolute
-    width: 2.5vh
+    width: 4vh
   &.active ~ &::before
     background-color: $colorGadgetCircleControlRay
   &.active::after
