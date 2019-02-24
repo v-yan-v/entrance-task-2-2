@@ -1,16 +1,22 @@
 'use strict';
 
 export function toggleMenu(navigation) {
-  // navigation.addEventListener('pointerdown', (evt)=>{
-  navigation.addEventListener('click', (evt)=>{
-    if (evt.target === navigation){
-      navigation.classList.toggle('Header-Navigation--fullscreen');
-      
-      if (document.body.style.overflow === 'hidden'){
-        document.body.style.overflow = '';
-      } else {
-        document.body.style.overflow = 'hidden';
-      }
+  let menuToggleBtn = navigation.getElementsByClassName('Header-SiteMenu')[0];
+  
+  menuToggleBtn.addEventListener('click', (evt)=>{
+    if (navigation.classList.contains('Header-Navigation--fullscreen')){
+      // close menu
+      navigation.classList.remove('Header-Navigation--fullscreen');
+      document.body.style.overflow = '';
+      menuToggleBtn.classList.remove('Header-SiteMenu--fullscreen');
+      menuToggleBtn.firstChild.classList.remove('Header-Hamburger--fullscreen');
+    }
+    else {
+      // show menu
+      navigation.classList.add('Header-Navigation--fullscreen');
+      document.body.style.overflow = 'hidden';
+      menuToggleBtn.classList.add('Header-SiteMenu--fullscreen');
+      menuToggleBtn.firstChild.classList.add('Header-Hamburger--fullscreen');
     }
   });
   
@@ -28,5 +34,7 @@ export function toggleMenu(navigation) {
     });
     navigation.classList.remove('Header-Navigation--fullscreen');
     document.body.style.overflow = '';
+    menuToggleBtn.classList.remove('Header-SiteMenu--fullscreen');
+    menuToggleBtn.firstChild.classList.remove('Header-Hamburger--fullscreen');
   });
 }

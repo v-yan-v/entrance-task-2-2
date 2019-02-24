@@ -54,6 +54,19 @@ body
   &::first-letter
     color: #ff0000
 
+@mixin visually-hidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+*:focus
+  box-shadow: -2px 0 10px 0 red, 0 -2px 10px 0 red, 2px 0 10px 0 red, 0 2px 10px 0 red
+
 .linkBack
   display: inline-block
   background:  url(../img/icons/arrow_1x.png) no-repeat center center
@@ -107,6 +120,7 @@ body
       width: 25px
       & .Nav
         display: none
+        //@include visually-hidden
       &--fullscreen
         align-items: center
         background: rgba(0,0,0,0.5)
@@ -126,10 +140,29 @@ body
           font-size: 3rem
           &-Link
             color: $colorMobileMenu
-        & .Header-Hamburger
-          display: none
-  &-Hamburger
+            background: linear-gradient(currentColor, currentColor) no-repeat center bottom
+            background-size: 0 2px
+            transition: background-size .5s
+            &:hover
+              background-size: 100% 2px
+  &-SiteMenu
+    background-color: transparent
+    border: none
+    box-sizing: border-box
     display: none
+    cursor: pointer
+    font-size: 0
+    height: 25px
+    padding: 0
+    width: 25px
+    @media screen and (max-width: 1000px)
+      display: block
+      &--fullscreen
+        position: absolute
+        right: 2vw
+        top: 2vw
+
+  &-Hamburger
     @media screen and (max-width: 1000px)
       display: block
       position: relative
@@ -140,11 +173,21 @@ body
         height: 2px
         width: 25px
       &::before, &::after
+        left: 0
         position: absolute
       &::before
         top: -10px
       &::after
         bottom: -10px
+      &--fullscreen
+        background-color: $colorCardBackground
+        transform: rotate(45deg)
+        &::before
+          background-color: $colorCardBackground
+          top: 0
+          transform: rotate(90deg)
+        &::after
+          display: none
 
 .Content
   display: grid
