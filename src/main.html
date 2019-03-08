@@ -12,9 +12,10 @@
 <body>
 <header class="Header container">
   <div class="Header-LogoBox">
-    <a href="#" class="Header-LogoLink"><img src="./img/logo/Яндекс Дом.svg"
-                                             alt="Главный Логотип - переход на домашнюю страницу"
-                                             class="Header-Logo">
+    <a href="#" class="Header-LogoLink" title="Главный Логотип - переход на главную страницу">
+      <img src="./img/logo/Яндекс Дом.svg"
+           alt="Главный Логотип - переход на главную страницу"
+           class="Header-Logo">
     </a>
   </div>
 
@@ -119,9 +120,9 @@
   <section id="scenarios" class="FavoriteScenarios">
     <div class="FavoriteScenarios-Header">
       <h2 class="FavoriteScenarios-Title">Favorite Scenarios</h2>
-      <nav class="FavoriteScenarios-Nav Nav">
-        <div class="Nav-Item"><a href="#" class="Nav-Link linkBack"></a></div>
-        <div class="Nav-Item Nav-Item--active"><a href="#" class="Nav-Link linkForward"></a></div>
+      <nav class="FavoriteScenarios-Nav Nav" aria-label="прокрутка избранных сценариев" title="прокрутка избранных сценариев">
+        <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+        <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
       </nav>
     </div>
     <div class="FavoriteScenarios-Content">
@@ -223,85 +224,86 @@
         <div class="FavoriteGadgets-Tag">Камеры</div>
       </div>
     </div>
-    <nav class="FavoriteGadgets-Nav Nav">
-      <div class="Nav-Item"><a href="#" class="Nav-Link linkBack"></a></div>
-      <div class="Nav-Item Nav-Item--active"><a href="#" class="Nav-Link linkForward"></a></div>
+    <nav class="FavoriteGadgets-Nav Nav" aria-label="прокрутка избранных устройств" title="прокрутка избранных устройств">
+      <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+      <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
     </nav>
   </div>
-  <div class="FavoriteGadgets-Content">
-    <div class="Card FavoriteGadgets-Card" data-cardType="time">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
+  <div class="ScrollWrapper">
+    <div class="FavoriteGadgets-Content">
+      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
       </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb Smart Bulb</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
       </div>
     </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="time">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="time">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb Smart Bulb</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="time">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="time">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-    <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
-      <div class="Card-Pictogram">
-        <img src="./img/icons/icon_temperature.svg" alt="">
-      </div>
-      <div class="Card-Content">
-        <div class="Card-Title">Philips Cooler</div>
-        <div class="Card-Status">Начнет охлаждать в 16:30</div>
-      </div>
-    </div>
-
   </div>
 </section>
 

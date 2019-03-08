@@ -67,18 +67,13 @@ body
 *:focus
   box-shadow: -2px 0 10px 0 red, 0 -2px 10px 0 red, 2px 0 10px 0 red, 0 2px 10px 0 red
 
-.linkBack
-  display: inline-block
-  background:  url(../img/icons/arrow_1x.png) no-repeat center center
-  height: 1em
-  width: 1.5em
+.ScrollWrapper
+  overflow: hidden
 
-.linkForward
-  display: inline-block
-  background:  url(../img/icons/arrow_1x.png) no-repeat center center
-  height: 1em
-  transform: scale(-1)
-  width: 1.5em
+.linkBack, .linkForward
+  cursor: pointer
+  background-color: transparent
+  border: none
 
 .Nav
   align-items: center
@@ -144,7 +139,7 @@ body
             background-size: 0 2px
             transition: background-size .5s
             &:hover
-              background-size: 100% 2px
+              background-size: 100% 2px //underline links
   &-SiteMenu
     background-color: transparent
     border: none
