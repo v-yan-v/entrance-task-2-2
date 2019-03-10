@@ -9,11 +9,15 @@ export function scroller() {
   let sections = document.getElementsByClassName('withScroll');
   
   [].forEach.call(sections, (section) =>{
-    let
-      nav = section.getElementsByClassName('scrollNav')[0],
-      navBtns = nav.getElementsByClassName('Nav-Item'),
-      wrapper = section.getElementsByClassName('scrollWrapper')[0],
-      itemsContainer = wrapper.firstElementChild;
+    let nav, navBtns, wrapper, itemsContainer;
+    
+    nav = section.getElementsByClassName('scrollNav')[0];
+    wrapper = section.getElementsByClassName('scrollWrapper')[0];
+  
+    if (!nav || !wrapper) { return; }
+    
+    navBtns = nav.getElementsByClassName('Nav-Item');
+    itemsContainer = wrapper.firstElementChild;
     
     nav.addEventListener('click', evt=>{
       let navItem = evt.target.closest('.Nav-Item');
