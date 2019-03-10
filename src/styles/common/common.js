@@ -5,5 +5,5 @@ import {scroller} from "./Scroller";
 
 export function commonElements() {
   toggleMenu(document.getElementsByClassName('Header-Navigation')[0]);
-  scroller(document.getElementById('gadgets'));
+  scroller();
 }
