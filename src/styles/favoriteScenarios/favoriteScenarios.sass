@@ -9,16 +9,19 @@
     font-size: 1.125rem
   &-Content
     display: grid
-    //grid-auto-flow: column
+    grid-auto-flow: column
     grid-gap: 1vw
     //grid-template-columns: repeat(auto-fit, minmax(1fr, 20vw) )
-    grid-template-columns: 1fr 1fr 1fr
-    //grid-template-rows: 1fr 1fr 1fr
+    //grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr 1fr 1fr auto
     //overflow: hidden
     padding: 2% 0
+    position: relative
+    left: 0
   @media screen and (max-width: 1000px)
     overflow: hidden
     &-Content
       grid-auto-flow: column
+      grid-template-rows: auto
     &-Nav
       display: none
