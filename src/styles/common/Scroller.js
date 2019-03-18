@@ -75,16 +75,16 @@ export function scroller() {
       
       itemsContainer.style.left = left + `px`;
       itemsContainer.style.top = top + `px`;
-    });
-    
-    section.addEventListener('touchend', event=>{
-      event.preventDefault();
-      setNewPos();
-    });
-    
-    section.addEventListener('touchcancel', event=>{
-      event.preventDefault();
-      setNewPos();
+  
+      section.addEventListener('touchend', endTouch);
+      section.addEventListener('touchcancel', endTouch);
+      
+      function endTouch(event) {
+        event.preventDefault();
+        setNewPos();
+        section.removeEventListener('touchend', endTouch);
+        section.removeEventListener('touchcancel', endTouch);
+      }
     });
     
     function setNewPos() {

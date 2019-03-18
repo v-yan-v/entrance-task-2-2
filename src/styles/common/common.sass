@@ -87,10 +87,11 @@ body
     opacity: 0.4
     padding: 0
     min-width: 1.5rem
-  &-Item:hover
-    background-color: #f2ebd6
     &--active
       opacity: 1
+  &-Item:hover
+    background-color: #f2ebd6
+
   &-Link
     color: $colorTextMain
     text-decoration: none
@@ -117,6 +118,7 @@ body
       position: fixed
       right: 2vw
       width: 25px
+      z-index: 50
       & .Nav
         display: none
         //@include visually-hidden
