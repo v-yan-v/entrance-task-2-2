@@ -39,7 +39,7 @@
 <section class="Content container">
   <section class="MainContent">
     <h2 id="summary" class="MainContent-Title">Summary</h2>
-    <div class="MainContent-Wrap">
+    <div class="MainContent-Wrap withScroll">
       <div class="MainContent-Summary">
         <p class="MainContent-Greeting">Hello, Harry</p>
         <p class="MainContent-Brief">doors and windows are unlocked, alarm is active</p>
@@ -59,59 +59,65 @@
           </div>
         </div>
       </div>
-      <div class="MainContent-Top">
-        <div class="Card" data-cardType="floorTemperature">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
+      <nav class="FavoriteScenarios-Nav Nav scrollNav" aria-label="прокрутка наиболее использукмых карточек" title="прокрутка наиболее использукмых карточек">
+        <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+        <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
+      </nav>
+      <div class="scrollWrapper">
+        <div class="MainContent-Top">
+          <div class="Card" data-cardType="floorTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
           </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Philips Cooler</div>
-            <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
           </div>
-        </div>
-        <div class="Card" data-cardType="airTemperature">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
+          <div class="Card" data-cardType="floorTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
           </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Philips Cooler</div>
-            <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
           </div>
-        </div>
-        <div class="Card" data-cardType="floorTemperature">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
+          <div class="Card" data-cardType="light">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb</div>
+              <div class="Card-Status">Включится в 17:00</div>
+            </div>
           </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Philips Cooler</div>
-            <div class="Card-Status">Начнет охлаждать в 16:30</div>
-          </div>
-        </div>
-        <div class="Card" data-cardType="airTemperature">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
-          </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Philips Cooler</div>
-            <div class="Card-Status">Начнет охлаждать в 16:30</div>
-          </div>
-        </div>
-        <div class="Card" data-cardType="light">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
-          </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb</div>
-            <div class="Card-Status">Включится в 17:00</div>
-          </div>
-        </div>
-        <div class="Card" data-cardType="airTemperature">
-          <div class="Card-Pictogram">
-            <img src="./img/icons/icon_temperature.svg" alt="">
-          </div>
-          <div class="Card-Content">
-            <div class="Card-Title">Philips Cooler</div>
-            <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
           </div>
         </div>
       </div>
