@@ -22,6 +22,7 @@
   &-Tag
     background-color: $colorCardBackground
     border-radius: 20px
+    cursor: pointer
     display: inline-block
     line-height: 1.6
     min-width: 2rem
@@ -45,17 +46,15 @@
       justify-content: space-between
       width: 100%
     &-Tags
-      min-width: initial
+      background-color: $colorTagActiveBackground
+      border: none
+      border-radius: 20px
+      min-width: 1rem
+      padding: 0.5rem 0
       width: auto
-    &-Tag:not(&-Tag--active)
-      display: none
-    &-Tag--active:after
-      content: ''
-      background: url(../img/icons/arrow_1x.png) no-repeat center center
-      display: inline-block
-      height: 20px
-      transform: rotate(-90deg)
-      vertical-align: middle
-      width: 20px
+    &-Tag
+      display: block
+      padding: 0
+      min-width: 1rem
     &-Nav
       display: none
