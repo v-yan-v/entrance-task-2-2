@@ -224,11 +224,11 @@
     <div class="FavoriteGadgets-TitleWrap">
       <div class="FavoriteGadgets-Title">Избранные устройства</div>
       <select class="FavoriteGadgets-Tags customTags" data-test="test" >
-        <option class="FavoriteGadgets-Tag FavoriteGadgets-Tag--active">Все</option>
-        <option class="FavoriteGadgets-Tag">Кухня</option>
-        <option class="FavoriteGadgets-Tag">Зал</option>
-        <option class="FavoriteGadgets-Tag">Лампочки</option>
-        <option class="FavoriteGadgets-Tag">Камеры</option>
+        <option class="FavoriteGadgets-Tag FavoriteGadgets-Tag--active" value="all">Все</option>
+        <option class="FavoriteGadgets-Tag" value="kitchen">Кухня</option>
+        <option class="FavoriteGadgets-Tag" value="livingRoom">Зал</option>
+        <option class="FavoriteGadgets-Tag" value="light">Лампочки</option>
+        <option class="FavoriteGadgets-Tag" value="cam">Камеры</option>
       </select>
     </div>
     <nav class="FavoriteGadgets-Nav Nav scrollNav" aria-label="прокрутка избранных устройств" title="прокрутка избранных устройств">
@@ -238,34 +238,61 @@
   </div>
   <div class="scrollWrapper">
     <div class="FavoriteGadgets-Content">
-      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="kitchen">
         <div class="Card-Pictogram">
           <img src="./img/icons/icon_temperature.svg" alt="">
         </div>
         <div class="Card-Content">
-          <div class="Card-Title">Philips Cooler</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb</div>
+          <div class="Card-Status">Включено</div>
         </div>
       </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+      <div class="Card FavoriteGadgets-Card" data-cardType="cam" data-room="livingRoom">
         <div class="Card-Pictogram">
           <img src="./img/icons/icon_temperature.svg" alt="">
         </div>
         <div class="Card-Content">
-          <div class="Card-Title">Philips Cooler</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card-Title">D-Link Omna 180 Cam</div>
+          <div class="Card-Status">Включится в 17:00.</div>
         </div>
       </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="kitchen">
         <div class="Card-Pictogram">
           <img src="./img/icons/icon_temperature.svg" alt="">
         </div>
         <div class="Card-Content">
           <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb Smart Bulb</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+          <div class="Card-Status">включится в 16:30</div>
         </div>
       </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="time">
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Elgato Eve Degree Connected</div>
+          <div class="Card-Status">Выключено до 17:00</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">LIFX Mini Day & Dusk A60 E27</div>
+          <div class="Card-Status">Включится в 17:00</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature" data-room="kitchen">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Xiaomi Mi Air Purifier 2S</div>
+          <div class="Card-Status">Выключено</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature" data-room="livingRoom">
         <div class="Card-Pictogram">
           <img src="./img/icons/icon_temperature.svg" alt="">
         </div>
@@ -274,34 +301,7 @@
           <div class="Card-Status">Начнет охлаждать в 16:30</div>
         </div>
       </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="time">
-        <div class="Card-Pictogram">
-          <img src="./img/icons/icon_temperature.svg" alt="">
-        </div>
-        <div class="Card-Content">
-          <div class="Card-Title">Philips Cooler</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
-        </div>
-      </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature">
-        <div class="Card-Pictogram">
-          <img src="./img/icons/icon_temperature.svg" alt="">
-        </div>
-        <div class="Card-Content">
-          <div class="Card-Title">Philips Cooler</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
-        </div>
-      </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
-        <div class="Card-Pictogram">
-          <img src="./img/icons/icon_temperature.svg" alt="">
-        </div>
-        <div class="Card-Content">
-          <div class="Card-Title">Philips Cooler</div>
-          <div class="Card-Status">Начнет охлаждать в 16:30</div>
-        </div>
-      </div>
-      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature">
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature" data-room="livingRoom">
         <div class="Card-Pictogram">
           <img src="./img/icons/icon_temperature.svg" alt="">
         </div>
