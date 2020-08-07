@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=0.5">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Умный Яндекс.Дом</title>
+  <!--<link rel="stylesheet" href="../dist/css/main.css">-->
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+<header class="Header container">
+  <div class="Header-LogoBox">
+    <a href="#" class="Header-LogoLink" title="Главный Логотип - переход на главную страницу">
+      <img src="./img/logo/Яндекс Дом.svg"
+           alt="Главный Логотип - переход на главную страницу"
+           class="Header-Logo">
+    </a>
+  </div>
+
+  <nav class="Header-Navigation">
+    <button class="Header-SiteMenu" aria-label="show hide site menu" title="show hide site menu"><span class="Header-Hamburger"></span></button>
+    <ul class="Nav ">
+      <li class="Nav-Item Nav-Item--active">
+        <a href="#summary" class="Nav-Link">Сводка</a>
+      </li>
+      <li class="Nav-Item">
+        <a href="#gadgets" class="Nav-Link">Устройства</a>
+      </li>
+      <li class="Nav-Item">
+        <a href="#scenarios" class="Nav-Link">Сценарии</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+
+<section class="Content container">
+  <section class="MainContent">
+    <h2 id="summary" class="MainContent-Title">Summary</h2>
+    <div class="MainContent-Wrap withScroll">
+      <div class="MainContent-Summary">
+        <p class="MainContent-Greeting">Hello, Harry</p>
+        <p class="MainContent-Brief">doors and windows are unlocked, alarm is active</p>
+        <div class="MainContent-Weather">
+          <div class="MainContent-WeatherInside">
+            <span class="MainContent-WeatherTitle">Дома</span>
+            <br>
+            <span class="MainContent-WeatherTemperature">+23</span>
+          </div>
+          <div class="MainContent-WeatherOutside">
+            <span class="MainContent-WeatherTitle">На улице</span>
+            <br>
+            <span class="MainContent-WeatherTemperature">+19</span>
+            <span class="MainContent-WeatherIco"></span>
+            <!--todo: поправить фон cloud-drizzle.svg и возможно других иконок-->
+            <!--<img class="MainContent-WeatherIco" src="./img/icons/cloud-drizzle.svg" alt="">-->
+          </div>
+        </div>
+      </div>
+      <nav class="FavoriteScenarios-Nav Nav scrollNav" aria-label="прокрутка наиболее использукмых карточек" title="прокрутка наиболее использукмых карточек">
+        <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+        <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
+      </nav>
+      <div class="scrollWrapper">
+        <div class="MainContent-Top">
+          <div class="Card" data-cardType="floorTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
+          </div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
+          </div>
+          <div class="Card" data-cardType="floorTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
+          </div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
+          </div>
+          <div class="Card" data-cardType="light">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb</div>
+              <div class="Card-Status">Включится в 17:00</div>
+            </div>
+          </div>
+          <div class="Card" data-cardType="airTemperature">
+            <div class="Card-Pictogram">
+              <img src="./img/icons/icon_temperature.svg" alt="">
+            </div>
+            <div class="Card-Content">
+              <div class="Card-Title">Philips Cooler</div>
+              <div class="Card-Status">Начнет охлаждать в 16:30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="scenarios" class="FavoriteScenarios withScroll">
+    <div class="FavoriteScenarios-Header">
+      <h2 class="FavoriteScenarios-Title">Favorite Scenarios</h2>
+      <nav class="FavoriteScenarios-Nav Nav scrollNav"  aria-label="прокрутка избранных сценариев" title="прокрутка избранных сценариев">
+        <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+        <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
+      </nav>
+    </div>
+   <div class="scrollWrapper">
+     <div class="FavoriteScenarios-Content">
+       <div class="Card" data-cardType="airTemperature">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="airTemperature">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb Xiaomi Yeelight LED Smart Bulb</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="airTemperature">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status"></div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+       <div class="Card" data-cardType="light">
+         <div class="Card-Pictogram">
+           <img src="./img/icons/icon_temperature.svg" alt="">
+         </div>
+         <div class="Card-Content">
+           <div class="Card-Title">Philips Cooler</div>
+           <div class="Card-Status">Начнет охлаждать в 16:30</div>
+         </div>
+       </div>
+     </div>
+   </div>
+  </section>
+</section>
+
+<section id="gadgets" class="FavoriteGadgets container withScroll">
+  <div class="FavoriteGadgets-Header">
+    <div class="FavoriteGadgets-TitleWrap">
+      <div class="FavoriteGadgets-Title">Избранные устройства</div>
+      <select class="FavoriteGadgets-Tags customTags" data-test="test" >
+        <option class="FavoriteGadgets-Tag FavoriteGadgets-Tag--active" value="all">Все</option>
+        <option class="FavoriteGadgets-Tag" value="kitchen">Кухня</option>
+        <option class="FavoriteGadgets-Tag" value="livingRoom">Зал</option>
+        <option class="FavoriteGadgets-Tag" value="light">Лампочки</option>
+        <option class="FavoriteGadgets-Tag" value="cam">Камеры</option>
+      </select>
+    </div>
+    <nav class="FavoriteGadgets-Nav Nav scrollNav" aria-label="прокрутка избранных устройств" title="прокрутка избранных устройств">
+      <button class="Nav-Item linkBack" aria-label="прокрутить назад" title="прокрутить назад">&lt;</button>
+      <button class="Nav-Item Nav-Item--active linkForward" aria-label="прокрутить вперёд" title="прокрутить вперёд">&gt;</button>
+    </nav>
+  </div>
+  <div class="scrollWrapper">
+    <div class="FavoriteGadgets-Content">
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="kitchen">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb</div>
+          <div class="Card-Status">Включено</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="cam" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">D-Link Omna 180 Cam</div>
+          <div class="Card-Status">Включится в 17:00.</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="kitchen">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Xiaomi Yeelight LED Smart Bulb Smart Bulb</div>
+          <div class="Card-Status">включится в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Elgato Eve Degree Connected</div>
+          <div class="Card-Status">Выключено до 17:00</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="light" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">LIFX Mini Day & Dusk A60 E27</div>
+          <div class="Card-Status">Включится в 17:00</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature" data-room="kitchen">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Xiaomi Mi Air Purifier 2S</div>
+          <div class="Card-Status">Выключено</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="airTemperature" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+      <div class="Card FavoriteGadgets-Card" data-cardType="floorTemperature" data-room="livingRoom">
+        <div class="Card-Pictogram">
+          <img src="./img/icons/icon_temperature.svg" alt="">
+        </div>
+        <div class="Card-Content">
+          <div class="Card-Title">Philips Cooler</div>
+          <div class="Card-Status">Начнет охлаждать в 16:30</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="Footer container">
+  <nav class="Footer-Navigation">
+    <ul class="Nav">
+      <li class="Nav-Item"><a href="#" class="Nav-Link">Support</a></li>
+      <li class="Nav-Item"><a href="#" class="Nav-Link">Callback</a></li>
+      <li class="Nav-Item"><a href="#" class="Nav-Link">For Developers</a></li>
+      <li class="Nav-Item"><a href="#" class="Nav-Link">Usage conditions</a></li>
+    </ul>
+  </nav>
+
+  <div class="Footer-Copyrights">
+    <span class="Footer-CopyrightsYear">&copy;2001-2017</span>
+    <a href="http://yandex.ru" class="Footer-CopyrightsLink">LTD <span class="yandexFL">"Yandex"</span></a>
+  </div>
+</footer>
+
+<script src="./js/bundle.js"></script>
+<!--<script id="__bs_script__">/*<![CDATA[*/document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.24.7'><\/script>".replace("HOST", location.hostname));//]]></script>-->
+</body>
+</html>
